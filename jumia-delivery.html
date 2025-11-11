@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mieza — Jumia Door Delivery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+ <header class="main-header">
+  <div class="header-container">
+    <!-- Brand -->
+    <h1 class="brand-text">Mieza</h1>
+
+    <!-- Hamburger Button (mobile) -->
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="jumia-delivery.html" class="active">Jumia Delivery</a></li>
+        <li><a href="supermarkets.html">Supermarkets</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+
+<main class="container">
+  <section class="page-hero hero-cream fade-up">
+    <h2>Book Jumia Door Delivery</h2>
+  </section>
+
+  <section class="form-section fade-up">
+    <div class="card form-card">
+      <form id="jumiaForm" class="form-grid">
+        <label>Full name
+          <input type="text" id="name" placeholder="Your full name" required>
+        </label>
+        <label>Phone number
+          <input type="tel" id="phone" placeholder="024XXXXXXXX" required>
+        </label>
+        <label>Jumia pickup station
+          <input type="text" id="pickup" placeholder="Pickup station name" required>
+        </label>
+        <label>Delivery address
+          <textarea id="address" rows="3" placeholder="Full delivery address" required></textarea>
+        </label>
+        <!-- NEW FIELD: Order Numbers -->
+        <label>Order Number(s)
+          <input type="text" id="orderNumbers" placeholder="Enter your Jumia order number(s)" required>
+        </label>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Submit Booking</button> 
+          <i class="notice">Please press the "submit booking" just once and wait a few seconds for a sent confirmation message</i>
+        </div>
+      </form>
+
+      <div id="confirmationMessage" class="card-success hidden" style="margin-top:14px;color:#3CB371">
+        <strong>✅ Booking received.</strong>
+        <p class="muted">We'll contact you shortly to confirm and arrange delivery.</p>
+        <a href="index.html" class="btn btn-outline">Back to Home</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="container" style="display:flex;gap:28px;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;">
+    <div style="min-width:220px">
+      <p class="muted" style="margin:0"><a href="about.html" style="color:inherit;text-decoration:none">About Us</a></p>
+      <p>
+        <a class="chat"
+           href="https://wa.me/233551836194?text=Hello%20Mieza%20Delivery!%20I’d%20like%20to%20make%20an%20inquiry."
+           target="_blank"
+           class="btn btn-primary"
+        >
+         Chat with Us on WhatsApp
+        </a>
+      </p>
+    </div>
+    <div style="min-width:220px">
+      <p class="muted" style="margin:0"><a href="supermarkets.html" style="color:inherit;text-decoration:none">Supermarkets</a></p>
+    </div>
+
+    <div style="display:flex;gap:36px;flex-wrap:wrap;align-items:flex-start">
+      <div>
+        <p style="font-weight:700;margin-bottom:8px">Payment Method</p>
+        Cash or Mobile Money
+      </div>
+    </div>
+  </div>
+
+  <div style="border-top:1px solid rgba(20,40,20,0.04);margin-top:18px;padding-top:16px;text-align:center;color:var(--muted);font-size:0.95rem">
+    © 2025 Mieza. All rights reserved.
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+
+<script>
+  // Select elements
+  const navToggle = document.getElementById("navToggle");
+  const navbar = document.getElementById("navbar");
+
+  // Toggle menu on click
+  navToggle.addEventListener("click", () => {
+    navToggle.classList.toggle("active");
+    navbar.classList.toggle("open");
+  });
+</script>
+
+</body>
+</html>

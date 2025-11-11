@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mieza — About & Contact</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="main-header">
+  <div class="header-container">
+    <!-- Brand -->
+    <h1 class="brand-text">Mieza</h1>
+
+    <!-- Hamburger Button (mobile) -->
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="jumia-delivery.html">Jumia Delivery</a></li>
+        <li><a href="supermarkets.html">Supermarkets</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+
+
+
+
+
+  <main class="container about-section fade-up">
+    <section class="page-hero hero-cream">
+      <h2>About Mieza</h2>
+    </section>
+
+    <div class="about-grid" style="display:grid;grid-template-columns:1fr 360px;gap:22px;margin-top:18px">
+      <div class="about-panel card">
+        <h3>Our Story</h3>
+        <p class="muted">Mieza was founded to help shoppers in Ghana get purchases — from e-commerce pickups and local supermarkets — delivered to their homes and offices quickly and safely.</p>
+
+        <h4 style="margin-top:12px">Vision</h4>
+        <p class="muted">To be Ghana's most trusted last-mile delivery partner.</p>
+
+        <h4 style="margin-top:12px">Mission</h4>
+        <ul class="muted">
+          <li>Deliver purchases quickly and safely</li>
+          <li>Partner with top supermarkets and platforms</li>
+          <li>Make ordering & delivery convenient</li>
+        </ul>
+      </div>
+
+      <aside class="about-panel card">
+        <h3>Contact Us</h3>
+        <p class="muted">Have questions or want to partner? Send us a message via our whatsapp link below.</p>
+
+  <a  class="chat"
+  href="https://wa.me/233551836194?text=Hello%20Mieza%20Delivery!%20I’d%20like%20to%20make%20an%20inquiry."
+  target="_blank"
+  class="btn btn-primary"
+>
+  Contact Us on WhatsApp
+</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+   <!-- Footer -->
+  <footer class="site-footer">
+    <!-- FEATURES ROW (short) -->
+    <div class="container" style="display:flex;gap:28px;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;">
+      <div style="min-width:220px">
+       <p class="muted" style="margin:0"><a href="about.html" style="color:inherit;text-decoration:none">About Us</a></p>
+       <p><a  class="chat"
+  href="https://wa.me/233551836194?text=Hello%20Mieza%20Delivery!%20I’d%20like%20to%20make%20an%20inquiry."
+  target="_blank"
+  class="btn btn-primary"
+>
+ Chat with Us on WhatsApp
+</a></p>
+      </div>
+      <div style="min-width:220px">
+          <p class="muted" style="margin:0"><a href="supermarkets.html" style="color:inherit;text-decoration:none">Supermarkets</a></p>
+      </div>
+
+      <div style="display:flex;gap:36px;flex-wrap:wrap;align-items:flex-start">
+        <div>
+          <p style="font-weight:700;margin-bottom:8px">Payment Method</p>
+          Cash or Mobile Money
+        </div>
+      </div>
+    </div>
+
+    <div style="border-top:1px solid rgba(20,40,20,0.04);margin-top:18px;padding-top:16px;text-align:center;color:var(--muted);font-size:0.95rem">
+      © 2025 Mieza. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  
+
+  <script>
+  // Select elements
+  const navToggle = document.getElementById("navToggle");
+  const navbar = document.getElementById("navbar");
+
+  // Toggle menu on click
+  navToggle.addEventListener("click", () => {
+    navToggle.classList.toggle("active");
+    navbar.classList.toggle("open");
+  });
+</script>
+
+</body>
+</html>

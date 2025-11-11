@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mieza — Deliveries Made Simple</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Main stylesheet (keeps your existing theme) -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Small page-specific styles to ensure the new layout looks correct even if your current CSS differs slightly -->
+  <style>
+    /* Page-specific polished additions */
+    .hero-cream { padding: 56px 0 36px; border-radius: 12px; }
+    .hero-grid { display:flex; gap:36px; align-items:center; align-content:center; flex-wrap:wrap; }
+    .hero-left { flex:1 1 520px; min-width:300px; padding-right:12px; }
+    .hero-right { flex: 0 0 30%; display:flex; justify-content:center; min-width:20%; }
+    .delivery-image { width:100%; max-width:100%; height:auto; border-radius:16px; box-shadow: 0 18px 40px rgba(30,80,50,0.06); object-fit:cover; }
+
+    /* How it works */
+    .how-it-works { margin:36px 0; padding:28px 0; }
+    .steps { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; align-items:start; }
+    .step-card { background: linear-gradient(180deg, #fff, #fbfbf6); border-radius:12px; padding:18px; box-shadow: 0 10px 30px rgba(20,40,20,0.04); text-align:center; transition:transform 320ms; }
+    .step-card:hover { transform:translateY(-6px); }
+    .step-ico { width:64px; height:64px; margin:0 auto 12px; display:flex; align-items:center; justify-content:center; border-radius:12px; background:linear-gradient(180deg,#EAF8F0,#FFF8E7); color:var(--primary-600); }
+
+    /* Services split cards */
+    .service-split { display:grid; grid-template-columns:repeat(2,1fr); gap:18px; margin:28px 0; align-items:stretch; }
+    .service-card { background: linear-gradient(180deg,#fff,#fff); border-radius:12px; padding:18px; box-shadow: var(--shadow); display:flex; flex-direction:column; justify-content:space-between; transition:transform var(--transition); }
+    .service-card:hover { transform:translateY(-6px); box-shadow:0 20px 46px rgba(20,40,20,0.06); }
+    .service-card .card-head { display:flex; gap:14px; align-items:center; }
+    .service-card .card-ico { width:46px;height:46px;border-radius:10px;background:linear-gradient(180deg,#F5EEDC,#EAF8F0); display:flex;align-items:center;justify-content:center; }
+    .service-card p { color:var(--muted); margin-top:8px; }
+
+    /* Footer spacing correction */
+    .page-features { margin-top:28px; padding-bottom: 18px; }
+    footer.site-footer { margin-top: 28px; padding-top: 22px; padding-bottom: 28px; }
+
+    /* Responsive adjustments */
+    @media (max-width: 980px) {
+      .hero-grid { flex-direction:column-reverse; text-align:center; }
+      .hero-left { padding-right:0; }
+      .hero-right { width:100%; }
+      .steps { grid-template-columns:repeat(1,1fr); }
+      .service-split { grid-template-columns:repeat(1,1fr); }
+    }
+
+
+/* Nav */
+.main-nav{display:flex;gap:16px;align-items:center}
+.nav-link{color:var(--text);text-decoration:none;font-weight:600;padding:8px 10px;border-radius:10px;transition:var(--transition)}
+.nav-link:hover{background:rgba(20,40,20,0.03)}
+.nav-link.active{background:linear-gradient(90deg, rgba(60,179,113,0.08), rgba(244,180,0,0.03));color:var(--primary-600)}
+  </style>
+</head>
+<body>
+<header class="main-header">
+  <div class="header-container">
+    <!-- Brand -->
+    <h1 class="brand-text">Mieza</h1>
+
+    <!-- Hamburger Button (mobile) -->
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="jumia-delivery.html">Jumia Delivery</a></li>
+        <li><a href="supermarkets.html">Supermarkets</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+
+
+
+  <!-- Main -->
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero-cream fade-up">
+      <div class="hero-grid container">
+        <div class="hero-left">
+          <h1 style="font-size:2.2rem;line-height:1.08;margin-bottom:12px">Fast & Reliable Deliveries with <span style="color:var(--primary-600)">Mieza</span></h1>
+          <p class="muted" style="font-size:1.05rem;margin-bottom:18px">Order from Jumia or shop at our partner supermarkets — Mieza picks up and delivers your items straight to your door, fast and safe.</p>
+
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <a class="btn btn-primary" href="jumia-delivery.html">Book Jumia Pickup</a>
+            <a class="btn btn-outline" href="supermarkets.html">Shop Supermarkets</a>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <!-- YOUR JPG: place it at images/delivery.jpg -->
+          <img src="images/illustrator.jpg" alt="Mieza Door Delivery" class="delivery-image" onerror="this.style.opacity=0.95; this.src='images/illustrator.jpg'">
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="how-it-works">
+      <h2 class="section-title" style="text-align:center">How Mieza Works</h2>
+      <p class="muted" style="text-align:center;max-width:900px;margin:6px auto 18px">Just 3 steps: book or order, we collect, we deliver.</p>
+
+      <div class="steps container">
+        <div class="step-card">
+      
+          <h4 style="margin-top:8px"> <img class="form" src="images/form.png" alt="form-logo"> Book</h4>
+          <p class="muted">Already ordered on Jumia? Fill the delivery form for doorstep delivery</p>
+
+          <p class="or"><strong>OR</strong></p>
+
+          <h4 style="margin-top:8px"> <img class="order" src="images/order.png" alt="order-logo">Order</h4>
+          <p class="muted">Shop from our partner supermarkets and add items to your cart.</p>
+        </div>
+
+        <div class="step-card">
+          <h4 style="margin-top:8px"><img class="pick" src="images/pick.png" alt="pick-logo">We Pick Up</h4>
+          <p class="muted">We collect your Jumia parcel from your pickup station.</p>
+
+           <p class="or"><strong>OR</strong></p>
+
+          
+          <h4 style="margin-top:8px"><img class="purchase" src="images/purchase.png" alt="purchase-logo">We Purchase</h4>
+          <p class="muted">We buy your cart items from the selected partner supermarket.</p>      
+        </div>
+
+        <div class="step-card">
+          <h4 style="margin-top:8px"><img class="delivery" src="images/deliver.png" alt="delivery-logo">Doorstep Delivery</h4>
+          <p class="muted">We deliver your Jumia or supermarket items safely to your home or office at your chosen time.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUICK ACTIONS (Jumia vs Supermarkets) -->
+    <section class="page-features">
+      <h2 class="section-title" style="text-align:center">Order Options</h2>
+      <p class="muted" style="text-align:center;max-width:900px;margin:6px auto 14px">Choose Mieza to collect your Jumia parcel or shop from partner supermarkets.</p>
+
+      <div class="service-split container">
+        <div class="service-card">
+          <div>
+            <div class="card-head">
+              <div>
+                <h3 style="margin:0" > <img class="jumia" src="images/jumia.png" alt="jumia-logo"><span class="jj">Jumia Pickup & Delivery</span></h3>
+                <p class="muted" style="margin:6px 0 0">Got a Jumia parcel? Mieza can collect and deliver it.</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:12px;display:flex;gap:10px">
+            <a class="btn btn-primary" href="jumia-delivery.html">Book Jumia Pickup</a>
+            <a class="btn btn-outline" href="jumia-delivery.html">Learn More</a>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div>
+            <div class="card-head">
+              <div>
+                <h3 style="margin:0"> <img class="shop" src="images/shop.png" alt="shop-logo" >Shop Supermarkets</h3>
+                <p class="muted" style="margin:6px 0 0">Shop supermarket items on Mieza — we’ll buy and deliver to your home or office.</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:12px;display:flex;gap:10px">
+            <a class="btn btn-primary" href="supermarkets.html">Browse Supermarkets</a>
+            <a class="btn btn-outline" href="supermarkets.html">See Stores</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <!-- FEATURES ROW (short) -->
+    <div class="container" style="display:flex;gap:28px;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;">
+      <div style="min-width:220px">
+       <p class="muted" style="margin:0"><a href="about.html" style="color:inherit;text-decoration:none">About Us</a></p>
+       <p><a  class="chat"
+  href="https://wa.me/233551836194?text=Hello%20Mieza%20Delivery!%20I’d%20like%20to%20make%20an%20inquiry."
+  target="_blank"
+  class="btn btn-primary"
+>
+ Chat with Us on WhatsApp
+</a></p>
+      </div>
+      <div style="min-width:220px">
+          <p class="muted" style="margin:0"><a href="supermarkets.html" style="color:inherit;text-decoration:none">Supermarkets</a></p>
+      </div>
+
+      <div style="display:flex;gap:36px;flex-wrap:wrap;align-items:flex-start">
+        <div>
+          <p style="font-weight:700;margin-bottom:8px">Payment Method</p>
+          Cash or Mobile Money
+        </div>
+      </div>
+    </div>
+
+    <div style="border-top:1px solid rgba(20,40,20,0.04);margin-top:18px;padding-top:16px;text-align:center;color:var(--muted);font-size:0.95rem">
+      © 2025 Mieza. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- Small client-side helper for a subtle animation when scrolling into view -->
+  <script>
+    // fade up on scroll (minimal)
+    document.addEventListener('DOMContentLoaded', () => {
+      const uppers = document.querySelectorAll('.fade-up, .fade-up *');
+      const opts = { threshold: 0.12 };
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(en => {
+          if (en.isIntersecting) en.target.classList.add('fade-up--visible');
+        });
+      }, opts);
+      document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+    });
+  </script>
+
+  <!-- keep your main script -->
+  <script src="js/script.js"></script>
+  
+
+  <script>
+  // Select elements
+  const navToggle = document.getElementById("navToggle");
+  const navbar = document.getElementById("navbar");
+
+  // Toggle menu on click
+  navToggle.addEventListener("click", () => {
+    navToggle.classList.toggle("active");
+    navbar.classList.toggle("open");
+  });
+</script>
+
+</body>
+</html>
