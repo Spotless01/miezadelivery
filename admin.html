@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mieza — Products Admin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Admin-specific layout */
+    .admin-wrap { display:flex; gap:18px; align-items:flex-start; margin-top:22px; }
+    .panel { background:var(--card); padding:14px; border-radius:12px; box-shadow:var(--shadow); min-height:320px; }
+    .left { width:260px; flex:0 0 260px; }
+    .middle { flex:1 1 520px; }
+    .right { width:360px; flex:0 0 360px; }
+    .store-item, .category-item { display:flex; justify-content:space-between; gap:8px; align-items:center; padding:8px; border-radius:8px; margin-bottom:8px; background:linear-gradient(180deg,#fff,#fff); border:1px solid rgba(20,40,20,0.03); }
+    .store-item.active { outline:2px solid rgba(6,143,6,0.08); }
+    .small { font-size:0.92rem; color:var(--muted) }
+    input.inline { padding:6px 8px; border-radius:8px; border:1px solid rgba(20,40,20,0.04); width:100%; }
+    .product-row { display:grid; grid-template-columns: 1fr 80px 140px 48px; gap:8px; align-items:center; margin-bottom:8px; }
+    .product-row input { padding:8px; border-radius:8px; border:1px solid rgba(20,40,20,0.04); }
+    .btn-sm { padding:6px 10px; border-radius:8px; border:none; cursor:pointer; }
+    .toolbar { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px; }
+    .muted { color:var(--muted) }
+    pre.json-preview { max-height:300px; overflow:auto; background:#0f1720; color:#e6ffed; padding:12px; border-radius:8px; font-size:12px; }
+    .hint { font-size:0.9rem; color:var(--muted); margin-top:8px }
+  </style>
+</head>
+<body>
+  <header class="main-header">
+    <div class="header-container">
+      <h1 class="brand-text">Mieza Admin</h1>
+      <nav class="navbar" id="navbar">
+        <ul class="nav-links">
+          <li><a href="index.html">Public Site</a></li>
+          <li><a href="supermarkets.html">View Stores</a></li>
+          <li><a href="admin.html" class="active">Products Admin</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-hero hero-cream fade-up">
+      <h2>Products Admin</h2>
+      <p class="muted">Edit stores, categories and products. When done, download the JSON and replace data/products.json on your server.</p>
+    </section>
+
+    <div class="admin-wrap">
+      <div class="panel left">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+          <strong>Stores</strong>
+          <button id="addStoreBtn" class="btn btn-primary" style="padding:6px 10px;font-weight:600">+ Store</button>
+        </div>
+        <div id="storesList" style="max-height:520px; overflow:auto"></div>
+        <div class="hint">Click a store to manage categories & products.</div>
+      </div>
+
+      <div class="panel middle">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+          <strong>Categories</strong>
+          <div style="display:flex;gap:8px;align-items:center">
+            <input id="newCategoryInput" class="inline" placeholder="New category name" style="width:220px" />
+            <button id="addCategoryBtn" class="btn btn-outline">+ Add</button>
+          </div>
+        </div>
+        <div id="categoriesList" style="margin-bottom:12px"></div>
+
+        <hr style="margin:12px 0">
+
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+          <strong>Products</strong>
+          <button id="addProductBtn" class="btn btn-primary">+ Product</button>
+        </div>
+
+        <div id="productsList" style="max-height:420px; overflow:auto"></div>
+      </div>
+
+      <div class="panel right">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+          <strong>JSON — actions</strong>
+          <div style="display:flex;gap:8px">
+            <button id="downloadBtn" class="btn btn-primary small">Download</button>
+            <button id="copyBtn" class="btn btn-outline small">Copy</button>
+          </div>
+        </div>
+
+        <input type="file" id="uploadInput" accept=".json" style="margin-bottom:8px" />
+        <div style="margin-bottom:8px">
+          <button id="resetBtn" class="btn btn-outline">Reset to remote</button>
+        </div>
+
+        <div style="margin-top:8px">
+          <strong class="small">Preview</strong>
+          <pre id="jsonPreview" class="json-preview"></pre>
+        </div>
+
+        <div class="hint" style="margin-top:10px">
+          After editing use Download to save a copy and replace <code>data/products.json</code> on your webserver. If you want automatic saving, I can add a backend endpoint.
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/admin.js"></script>
+  <script src="js/navbar.js"></script>
+</body>
+</html>
