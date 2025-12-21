@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mieza — Retailers (Bulk Orders)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="header-container">
+      <h1 class="brand-text">Mieza</h1>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+      <nav class="navbar" id="navbar">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="jumia-delivery.html">Jumia Delivery</a></li>
+          <li><a href="supermarkets.html">Supermarkets</a></li>
+          <li><a href="retailers.html" class="active">Retailers</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-hero hero-cream">
+      <h2>Make Your Bulk Purchases</h2>
+      <p class="muted">Send a bulk list and we'll source & transport it to your store.</p>
+    </section>
+
+    <section class="form-section" style="margin-top:18px">
+      <div class="card form-card">
+        <h3>Chat with us on WhatsApp</h3>
+        <p class="muted">Prefer talking? Quick replies on WhatsApp.</p>
+        <p><a class="btn btn-primary" id="waChatBtn" target="_blank" rel="noopener noreferrer" href="https://wa.me/233551836194?text=Hello%20Mieza%20Delivery!%20I%27m%20a%20retailer%20interested%20in%20bulk%20purchases.">Chat on WhatsApp</a></p>
+
+        <hr style="margin:16px 0">
+
+        <h3>Send a Bulk Order</h3>
+        <p class="muted">Paste a list (one item per line) or upload CSV (item,qty,notes).</p>
+
+        <form id="retailerBulkForm">
+          <label>Business / Retailer Name
+            <input type="text" id="retailerName" placeholder="Your business name" required>
+          </label>
+          <label>Contact Person
+            <input type="text" id="retailerContact" placeholder="Full name" required>
+          </label>
+          <label>Phone number
+            <input type="tel" id="retailerPhone" placeholder="024XXXXXXXX" required>
+          </label>
+          <label>Email (optional)
+            <input type="email" id="retailerEmail" placeholder="email@company.com">
+          </label>
+          <label>Delivery Location
+            <input type="text" id="retailerLocation" placeholder="Town / Address" required>
+          </label>
+
+          <label>Paste bulk items (one item per line)
+            <textarea id="retailerItems" rows="6" placeholder="e.g. Golden Tree Chocolate, 20"></textarea>
+          </label>
+
+          <label>Or upload CSV (item,qty,notes) - optional
+            <input type="file" id="retailerFile" accept=".csv,text/csv">
+          </label>
+
+          <div style="display:flex;gap:12px;margin-top:12px">
+            <button type="submit" class="btn btn-primary">Send Bulk Request</button>
+            <button type="button" id="waQuickSend" class="btn btn-outline">Send to WhatsApp</button>
+          </div>
+
+          <div id="retailerConfirmation" class="hidden" style="margin-top:12px;color:#3CB371">
+            <strong>✅ Request sent.</strong>
+            <p class="muted">We'll contact you shortly to confirm pricing and delivery.</p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container" style="display:flex;gap:28px;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;">
+      <div style="min-width:220px">
+        <p class="muted" style="margin:0"><a href="about.html" style="color:inherit;text-decoration:none">About Us</a></p>
+        <p><a href="https://wa.me/233551836194?text=Hello%20Mieza%20Delivery!%20I%27d%20like%20to%20make%20an%20inquiry." target="_blank" class="btn btn-primary">Chat on WhatsApp</a></p>
+      </div>
+      <div style="min-width:220px"><p class="muted" style="margin:0"><a href="supermarkets.html" style="color:inherit;text-decoration:none">Supermarkets</a></p></div>
+      <div style="display:flex;gap:36px;flex-wrap:wrap;align-items:flex-start"><div><p style="font-weight:700;margin-bottom:8px">Payment Method</p>Cash or Mobile Money</div></div>
+    </div>
+    <div style="border-top:1px solid rgba(20,40,20,0.04);margin-top:18px;padding-top:16px;text-align:center;color:var(--muted);font-size:0.95rem">© 2025 Mieza. All rights reserved.</div>
+  </footer>
+
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/retailers.js"></script>
+</body>
+</html>
