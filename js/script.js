@@ -91,11 +91,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* ---------- Supermarket Product Data ---------- */
   const supermarketProducts = {
-    citymall: { Groceries: [ { id: "city-1", name: "Golden Tree Chocolate (250g)", price: 15.0, image: "images/products/city/chocolate.jpg" }, { id: "city-2", name: "Voltic Water (1.5L)", price: 5.0, image: "images/products/city/water.jpg" }, { id: "city-3", name: "Indomie Noodles (Pack)", price: 3.5, image: "images/products/city/indomie.jpg" }], Meats: [ { id: "city-4", name: "Fresh Chicken (1kg)", price: 40.0, image: "images/products/city/chicken.jpg" } ] },
-    chinamall: { Electronics: [ { id: "china-2", name: "Bluetooth Speaker", price: 80.0, image: "images/products/china/speaker.jpg" }, { id: "china-3", name: "LED Smart Bulb", price: 60.0, image: "images/products/china/bulb.jpg" } ], Homeware: [ { id: "china-1", name: "Ceramic Dinner Set (12pc)", price: 120.0, image: "images/products/china/dinner-set.jpg" } ] },
+  citymall: { Groceries: [ { id: "city-1", name: "Golden Tree Chocolate (250g)", price: 15.0, image: "images/products/city/chocolate.jpg" }, { id: "city-2", name: "Voltic Water (1.5L)", price: 5.0, image: "images/products/city/water.jpg" }, { id: "city-3", name: "Indomie Noodles (Pack)", price: 3.5, image: "images/products/city/indomie.jpg" }], Meats: [ { id: "city-4", name: "Fresh Chicken (1kg)", price: 40.0, image: "images/products/city/chicken.jpg" } ] },
+    
+  chinamall: { Electronics: [ { id: "china-2", name: "Bluetooth Speaker", price: 80.0, image: "images/products/china/speaker.jpg" }, { id: "china-3", name: "LED Smart Bulb", price: 60.0, image: "images/products/china/bulb.jpg" } ], Homeware: [ { id: "china-1", name: "Ceramic Dinner Set (12pc)", price: 120.0, image: "images/products/china/dinner-set.jpg" } ] },
+  
     melcom: { Appliances: [ { id: "melcom-1", name: "Rice Cooker", price: 150.0, image: "images/products/melcom/ricecooker.jpg" } ], Essentials: [ { id: "melcom-2", name: "Cooking Oil (5L)", price: 95.0, image: "images/products/melcom/oil.jpg" }, { id: "melcom-3", name: "Sunlight Detergent (2kg)", price: 25.0, image: "images/products/melcom/detergent.jpg" } ] },
-    shoprite: { Dairy: [ { id: "shop-1", name: "Fresh Milk (2L)", price: 12.0, image: "images/products/shoprite/milk.jpg" } ], Bakery: [ { id: "shop-2", name: "Bread Loaf", price: 10.0, image: "images/products/shoprite/bread.jpg" } ], Fruits: [ { id: "shop-3", name: "Bananas (1kg)", price: 8.0, image: "images/products/shoprite/bananas.jpg" } ] },
-    maxmart: { Breakfast: [ { id: "max-1", name: "Corn Flakes (500g)", price: 28.0, image: "images/products/maxmart/cornflakes.jpg" } ], Groceries: [ { id: "max-2", name: "Tomato Paste (Pack)", price: 15.0, image: "images/products/maxmart/tomato.jpg" } ], Beverages: [ { id: "max-3", name: "Bottled Juice (1L)", price: 18.0, image: "images/products/maxmart/juice.jpg" } ] },
+    
+  shoprite: { Dairy: [ { id: "shop-1", name: "Fresh Milk (2L)", price: 12.0, image: "images/products/shoprite/milk.jpg" } ], Bakery: [ { id: "shop-2", name: "Bread Loaf", price: 10.0, image: "images/products/shoprite/bread.jpg" } ], Fruits: [ { id: "shop-3", name: "Bananas (1kg)", price: 8.0, image: "images/products/shoprite/bananas.jpg" } ] },
+       
+  "Restaurant": {
+    "Alcoholic Drinks": [
+      { "id": "shop-1", "name": "Club", "price": 120.0, "image": "images/products/restaurant/club-beer.png" }
+    ]
+  }
   };
 
   /* ---------- Render Categories & Products ---------- */
